@@ -44,7 +44,7 @@ cells:
       thresholds: *thresholds-slow
 
   DC:
-    dataRef: "test-data-small-sin"
+    dataRef: "test-data-small-cos"
     label:
       separator: "cr"
     labelColor:
