@@ -42,7 +42,17 @@ cells:
       separator: "colon"
     labelColor:
       thresholds: *thresholds-slow
-
+   
+   S-N:
+    dataRef: "test-data-small-sin"
+    flowAnimation:
+      thresholdOffValue: 2
+      thresholdLwrValue: 10
+      thresholdLwrDurationSecs: 1
+      thresholdUprValue: 100
+      thresholdUprDurationSecs: 0.1
+      unidirectional: false
+  
   DC:
     dataRef: "test-data-small-cos"
     label:
