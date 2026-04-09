@@ -40,8 +40,11 @@ cells:
     dataRef: "test-data-small-sin"
     label:
       separator: "colon"
-      #units: "pps"
     labelColor:
       thresholds: *thresholds-slow
-    #link: *grafana-home
+
+   S-N:
+    #tags: ['worker', 'rate']
+    dataRef: "test-data-small-sin"
+    flowAnimation: *flowanim-slow
 
