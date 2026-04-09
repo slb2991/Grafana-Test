@@ -43,7 +43,7 @@ cells:
     labelColor:
       thresholds: *thresholds-slow
    
-  S-N:
+  S_N:
     dataRef: "test-data-small-sin"
     flowAnimation:
       thresholdOffValue: 2
