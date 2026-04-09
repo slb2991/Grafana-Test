@@ -43,8 +43,10 @@ cells:
     labelColor:
       thresholds: *thresholds-slow
 
-   S-N:
-    #tags: ['worker', 'rate']
+  DC:
     dataRef: "test-data-small-sin"
-    flowAnimation: *flowanim-slow
+    label:
+      separator: "colon"
+    labelColor:
+      thresholds: *thresholds-slow
 
