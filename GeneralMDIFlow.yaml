@@ -43,7 +43,7 @@ cells:
     labelColor:
       thresholds: *thresholds-slow
    
-   S-N:
+  S-N:
     dataRef: "test-data-small-sin"
     flowAnimation:
       thresholdOffValue: 2
@@ -54,9 +54,9 @@ cells:
       unidirectional: false
   
   DC:
-    dataRef: "test-data-small-cos"
-    label:
-      separator: "cr"
-    labelColor:
-      thresholds: *thresholds-slow
+     dataRef: "test-data-small-cos"
+     label:
+       separator: "cr"
+     labelColor:
+       thresholds: *thresholds-slow
 
