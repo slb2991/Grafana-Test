@@ -60,7 +60,7 @@ cells:
      labelColor:
        thresholds: *thresholds-slow
 
-   DC_P1:
+  DC_P1:
     dataRef: "test-data-small-sin"
     flowAnimation:
       thresholdOffValue: 0
@@ -103,5 +103,4 @@ cells:
        separator: "cr"
      labelColor:
        thresholds: *thresholds-slow
-
 
