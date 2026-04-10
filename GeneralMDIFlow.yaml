@@ -39,15 +39,15 @@ cells:
   Sensors:
     dataRef: "test-data-small-sin"
     label:
-      separator: "colon"
+      separator: "cr"
     labelColor:
       thresholds: *thresholds-slow
    
   S_N:
     dataRef: "test-data-small-sin"
     flowAnimation:
-      thresholdOffValue: 2
-      thresholdLwrValue: 10
+      thresholdOffValue: 0
+      thresholdLwrValue: 1
       thresholdLwrDurationSecs: 1
       thresholdUprValue: 100
       thresholdUprDurationSecs: 0.1
@@ -59,4 +59,29 @@ cells:
        separator: "cr"
      labelColor:
        thresholds: *thresholds-slow
+
+   DC_P:
+    dataRef: "test-data-small-sin"
+    flowAnimation:
+      thresholdOffValue: 0
+      thresholdLwrValue: 1
+      thresholdLwrDurationSecs: 1
+      thresholdUprValue: 100
+      thresholdUprDurationSecs: 0.1
+      unidirectional: false
+
+  DB:
+     dataRef: "test-data-small-cos"
+     label:
+       separator: "cr"
+     labelColor:
+       thresholds: *thresholds-slow
+
+  P:
+     dataRef: "test-data-small-cos"
+     label:
+       separator: "cr"
+     labelColor:
+       thresholds: *thresholds-slow
+
 
