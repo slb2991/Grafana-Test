@@ -21,8 +21,8 @@ anchorLinks:
       thresholdUprValue: 100
       thresholdUprDurationSecs: 0.1
   - flowAnimation: &flowanim-sys
-      thresholdOffValue: 2
-      thresholdLwrValue: 10
+      thresholdOffValue: 0
+      thresholdLwrValue: 0
       thresholdLwrDurationSecs: 1
       thresholdUprValue: 100
       thresholdUprDurationSecs: 0.1
@@ -64,13 +64,8 @@ cells:
 
   DC_P1:
     dataRef: "test-data-small-sin"
-    flowAnimation:
-      thresholdOffValue: 1
-      thresholdLwrValue: 2
-      thresholdLwrDurationSecs: 1
-      thresholdUprValue: 100
-      thresholdUprDurationSecs: 0.1
-      unidirectional: false
+    flowAnimation: *flowanim-sys
+
 
   DC_P2:
     dataRef: "test-data-small-sin"
@@ -91,7 +86,7 @@ cells:
      dataRef: "test-data-small-sin"
      label:
        separator: "cr"
-       unitsPostfix: "Topics"
+       unitsPostfix: "Topic"
      labelColor:
        thresholds: *thresholds-slow
 
@@ -106,3 +101,14 @@ cells:
     dataRef: "test-data-small-sin"
     flowAnimation: *flowanim-sys
 
+  E_S3:
+    dataRef: "test-data-small-sin"
+    flowAnimation: *flowanim-sys
+
+  S3:
+     dataRef: "test-data-small-sin"
+     label:
+       separator: "cr"
+       unitsPostfix: "GB"
+     labelColor:
+       thresholds: *thresholds-slow
