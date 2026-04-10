@@ -21,7 +21,7 @@ anchorLinks:
       thresholdUprValue: 100
       thresholdUprDurationSecs: 0.1
   - flowAnimation: &flowanim-sys
-      thresholdOffValue: 0
+      thresholdOffValue: 1
       thresholdLwrValue: 1
       thresholdLwrDurationSecs: 1
       thresholdUprValue: 100
@@ -51,6 +51,10 @@ cells:
       thresholds: *thresholds-slow
    
   S_N:
+    dataRef: "test-data-small-sin"
+    flowAnimation: *flowanim-sys
+
+  N-DC:
     dataRef: "test-data-small-sin"
     flowAnimation: *flowanim-sys
   
