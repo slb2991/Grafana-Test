@@ -22,7 +22,7 @@ anchorLinks:
       thresholdUprDurationSecs: 0.1
   - flowAnimation: &flowanim-sys
       thresholdOffValue: 0
-      thresholdLwrValue: 0
+      thresholdLwrValue: 1
       thresholdLwrDurationSecs: 1
       thresholdUprValue: 100
       thresholdUprDurationSecs: 0.1
