@@ -1,10 +1,15 @@
+---
+
+#------------------------------------------------------------------------------
+# YAML Aliases to simplify maintenance
+
 anchorLinks:
   - link: &grafana-home
       url: "https://grafana.com/"
       params: "time"
   - thresholds: &thresholds-slow
       - {color: "red", level: 0}
-      - {color: "green", level: 1}
+      - {color: "green", level: .1}
   - thresholds: &thresholds-fast
       - {color: "green", level: 0}
       - {color: "orange", level: 200}
@@ -15,6 +20,13 @@ anchorLinks:
       thresholdLwrDurationSecs: 1
       thresholdUprValue: 100
       thresholdUprDurationSecs: 0.1
+  - flowAnimation: &flowanim-sys
+      thresholdOffValue: 2
+      thresholdLwrValue: 10
+      thresholdLwrDurationSecs: 1
+      thresholdUprValue: 100
+      thresholdUprDurationSecs: 0.1
+      unidirectional: false
   - flowAnimation: &flowanim-fast
       thresholdOffValue: 10
       thresholdLwrValue: 100
@@ -40,13 +52,8 @@ cells:
    
   S_N:
     dataRef: "test-data-small-sin"
-    flowAnimation:
-      thresholdOffValue: 1
-      thresholdLwrValue: 2
-      thresholdLwrDurationSecs: 1
-      thresholdUprValue: 100
-      thresholdUprDurationSecs: 0.1
-      unidirectional: false
+    flowAnimation: *flowanim-sys
+   
   
   DC:
      dataRef: "test-data-small-sin"
@@ -67,23 +74,11 @@ cells:
 
   DC_P2:
     dataRef: "test-data-small-sin"
-    flowAnimation:
-      thresholdOffValue: 1
-      thresholdLwrValue: 2
-      thresholdLwrDurationSecs: 1
-      thresholdUprValue: 100
-      thresholdUprDurationSecs: 0.1
-      unidirectional: false
+    flowAnimation: *flowanim-sys
 
   P_DB:
     dataRef: "test-data-small-sin"
-    flowAnimation:
-      thresholdOffValue: 0
-      thresholdLwrValue: 1
-      thresholdLwrDurationSecs: 1
-      thresholdUprValue: 100
-      thresholdUprDurationSecs: 0.1
-      unidirectional: false
+    flowAnimation: *flowanim-sys
 
   DB:
      dataRef: "test-data-small-sin"
@@ -96,7 +91,7 @@ cells:
      dataRef: "test-data-small-sin"
      label:
        separator: "cr"
-       units: "topics"
+       unitsPostfix: "Topics"
      labelColor:
        thresholds: *thresholds-slow
 
@@ -109,11 +104,5 @@ cells:
 
   P_E:
     dataRef: "test-data-small-sin"
-    flowAnimation:
-      thresholdOffValue: 0
-      thresholdLwrValue: 1
-      thresholdLwrDurationSecs: 1
-      thresholdUprValue: 100
-      thresholdUprDurationSecs: 0.1
-      unidirectional: false
+    flowAnimation: *flowanim-sys
 
