@@ -53,7 +53,6 @@ cells:
   S_N:
     dataRef: "test-data-small-sin"
     flowAnimation: *flowanim-sys
-   
   
   DC:
      dataRef: "test-data-small-sin"
@@ -62,16 +61,15 @@ cells:
      labelColor:
        thresholds: *thresholds-slow
 
-  DC_P1:
+  DC-P1:
     dataRef: "test-data-small-sin"
     flowAnimation: *flowanim-sys
 
-
-  DC_P2:
+  DC-P2:
     dataRef: "test-data-small-sin"
     flowAnimation: *flowanim-sys
 
-  P_DB:
+  P-DB:
     dataRef: "test-data-small-sin"
     flowAnimation: *flowanim-sys
 
@@ -97,11 +95,11 @@ cells:
      labelColor:
        thresholds: *thresholds-slow
 
-  P_E:
+  P-E:
     dataRef: "test-data-small-sin"
     flowAnimation: *flowanim-sys
 
-  E_S3:
+  E-S3:
     dataRef: "test-data-small-sin"
     flowAnimation: *flowanim-sys
 
