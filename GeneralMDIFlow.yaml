@@ -1,8 +1,3 @@
----
-
-#------------------------------------------------------------------------------
-# YAML Aliases to simplify maintenance
-
 anchorLinks:
   - link: &grafana-home
       url: "https://grafana.com/"
@@ -46,15 +41,15 @@ cells:
   S_N:
     dataRef: "test-data-small-sin"
     flowAnimation:
-      thresholdOffValue: 0
-      thresholdLwrValue: 1
+      thresholdOffValue: 1
+      thresholdLwrValue: 2
       thresholdLwrDurationSecs: 1
       thresholdUprValue: 100
       thresholdUprDurationSecs: 0.1
       unidirectional: false
   
   DC:
-     dataRef: "test-data-small-cos"
+     dataRef: "test-data-small-sin"
      label:
        separator: "cr"
      labelColor:
@@ -63,8 +58,8 @@ cells:
   DC_P1:
     dataRef: "test-data-small-sin"
     flowAnimation:
-      thresholdOffValue: 0
-      thresholdLwrValue: 1
+      thresholdOffValue: 1
+      thresholdLwrValue: 2
       thresholdLwrDurationSecs: 1
       thresholdUprValue: 100
       thresholdUprDurationSecs: 0.1
@@ -73,8 +68,8 @@ cells:
   DC_P2:
     dataRef: "test-data-small-sin"
     flowAnimation:
-      thresholdOffValue: 0
-      thresholdLwrValue: 1
+      thresholdOffValue: 1
+      thresholdLwrValue: 2
       thresholdLwrDurationSecs: 1
       thresholdUprValue: 100
       thresholdUprDurationSecs: 0.1
@@ -91,16 +86,34 @@ cells:
       unidirectional: false
 
   DB:
-     dataRef: "test-data-small-cos"
+     dataRef: "test-data-small-sin"
      label:
        separator: "cr"
      labelColor:
        thresholds: *thresholds-slow
 
   P:
-     dataRef: "test-data-small-cos"
+     dataRef: "test-data-small-sin"
+     label:
+       separator: "cr"
+       units: "topics"
+     labelColor:
+       thresholds: *thresholds-slow
+
+  E:
+     dataRef: "test-data-small-sin"
      label:
        separator: "cr"
      labelColor:
        thresholds: *thresholds-slow
+
+  P_E:
+    dataRef: "test-data-small-sin"
+    flowAnimation:
+      thresholdOffValue: 0
+      thresholdLwrValue: 1
+      thresholdLwrDurationSecs: 1
+      thresholdUprValue: 100
+      thresholdUprDurationSecs: 0.1
+      unidirectional: false
 
