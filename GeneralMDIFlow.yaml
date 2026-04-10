@@ -60,7 +60,27 @@ cells:
      labelColor:
        thresholds: *thresholds-slow
 
-   DC_P:
+   DC_P1:
+    dataRef: "test-data-small-sin"
+    flowAnimation:
+      thresholdOffValue: 0
+      thresholdLwrValue: 1
+      thresholdLwrDurationSecs: 1
+      thresholdUprValue: 100
+      thresholdUprDurationSecs: 0.1
+      unidirectional: false
+
+  DC_P2:
+    dataRef: "test-data-small-sin"
+    flowAnimation:
+      thresholdOffValue: 0
+      thresholdLwrValue: 1
+      thresholdLwrDurationSecs: 1
+      thresholdUprValue: 100
+      thresholdUprDurationSecs: 0.1
+      unidirectional: false
+
+  P_DB:
     dataRef: "test-data-small-sin"
     flowAnimation:
       thresholdOffValue: 0
