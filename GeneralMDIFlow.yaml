@@ -50,7 +50,7 @@ cells:
     labelColor:
       thresholds: *thresholds-slow
    
-  S_N:
+  S-N:
     dataRef: "test-data-small-sin"
     flowAnimation: *flowanim-sys
 
@@ -77,13 +77,16 @@ cells:
     dataRef: "test-data-small-sin"
     flowAnimation: *flowanim-sys
 
+  DB-P:
+    dataRef: "test-data-small-sin"
+    flowAnimation: *flowanim-sys
+
   DB:
      dataRef: "test-data-small-sin"
      label:
        separator: "cr"
      labelColor:
        thresholds: *thresholds-slow
-
   P:
      dataRef: "test-data-small-sin"
      label:
@@ -91,7 +94,6 @@ cells:
        unitsPostfix: "Topic"
      labelColor:
        thresholds: *thresholds-slow
-
   E:
      dataRef: "test-data-small-sin"
      label:
