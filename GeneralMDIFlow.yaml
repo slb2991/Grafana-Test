@@ -52,7 +52,7 @@ cells:
 
   Outline:
     dataRef: "test-data-small-sin"
-    labelColor:
+    lineColor:
       thresholds: *thresholds-slow
    
   S-N:
