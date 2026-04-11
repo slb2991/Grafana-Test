@@ -49,6 +49,11 @@ cells:
       separator: "cr"
     labelColor:
       thresholds: *thresholds-slow
+
+  Outline:
+    dataRef: "test-data-small-sin"
+    color:
+      thresholds: *thresholds-slow
    
   S-N:
     dataRef: "test-data-small-sin"
@@ -116,3 +121,4 @@ cells:
        unitsPostfix: "GB"
      labelColor:
        thresholds: *thresholds-slow
+
